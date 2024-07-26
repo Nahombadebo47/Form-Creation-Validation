@@ -12,26 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
       let isValid = true;
       let messages = [];
       
-      
       if (userName.length < 3) {
         isValid = false;
         messages.push('The username should be longer than 3 characters.');
       }
-  
-      
       if (!email.includes('@') && !email.includes('.') ) {
         isValid = false;
         messages.push('Your Email adress should include "@" and "." ');
-    }
-  
-      
+      }
       if (password.length < 8) {
         isValid = false;
         messages.push('Password must include at least 8 characters.');
       }
-  
-    
-      feedbackDiv.style.display = "block";
+        feedbackDiv.style.display = "block";
       if (isValid) {
         feedbackDiv.innerText = 'Registration successful!';
         feedbackDiv.style.color = "#28a745"; 
